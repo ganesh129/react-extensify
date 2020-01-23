@@ -1,0 +1,56 @@
+const incrementCount=(payload={})=>({......})
+
+payload={}
+we have to pass this empty object as default value of payload because if we call
+
+store.dispatch(incrementCount())
+without passing value of incrementBy int hat case default empty object will work.
+and we will get no error in console .
+
+//Destructing apply//
+const add=(data)=>{
+    return data.a +data.b
+}
+console.log(add({a:1,b:2}));
+
+using Destructing we can replace it by
+const add=({a,b})=>{
+    return a + b; 
+}
+console.log(add({a:1,b:2}));
+
+So,we will apply it in redux incrementCount function and replace payload by {incrementBy=1}
+
+//Reducers:::::::====
+const expenseReducer=(state=[],action)=>{
+    here state=[],we can pass empty array as default for expenses bcz thats an arraybut in case of filters having so many
+    properties like text,sortBy....we have to pass default value for each of properties.So, instead of writing inline
+    we willcreate a variable that contain the dafault value and we will pass that in the reducers.
+
+//combine reducers let us to create a singlle syore for multiple reducers.
+const reucer=createStore(
+    combineReducers({
+        expenses:expenseReducer,
+        filters:filterReducer
+    })
+)
+//
+
+uuid----it letus generatre unique identifiers(id)
+npm install  uuid;
+
+//Spread Operator
+To add things in array without changing the array
+We can use concat
+const names=['ganesh','bittu'];
+names.concat('mahesh');
+ 
+ but we can also use spread Operator
+  [...names,'mahesh'];
+  ['raju',...names,'mahesh'];
+  it will give new array
+
+
+  REact-redux-it is a librarythat allows us toconnect our redux storesto our react component and it
+  makes heavy use of pattern known as HIGHER ORDER component.
+A higher-order component is a function that takes a component and returns a new component.

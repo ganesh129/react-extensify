@@ -1,0 +1,6 @@
+to set up date functionality from which user can use date when they
+are adding expenses:-
+install
+Moment.js,
+React-dates,-
+react-addons-shallow-compare-it is a utility function used by react-dates
