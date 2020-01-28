@@ -1,6 +1,6 @@
 import React from 'react';
 import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
-import AddExpensePage from '../components/AddExpensepage';
+import AddExpensePage from '../components/AddExpensePage';
 import EditExpensePage from  '../components/EditExpensePage';
 import NotFound from  '../components/NotFoundPage';
 import Header from '../components/Header';
