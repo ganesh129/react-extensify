@@ -5,7 +5,6 @@
   "author": "ganesh",
   "license": "MIT",
   "scripts": {
-    "server": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
