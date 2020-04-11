@@ -11,20 +11,20 @@ import getVisibleExpenses from './selectors/expenses';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import moment from 'moment';
-
+import  './firebase/firebase';
 
 
 
 const store=configureStore();
 
- store.dispatch(addExpense({description:'water bill',amount:150,createdAt:0}));
- store.dispatch(addExpense({description:'gas bill',createdAt:2020}));
- store.dispatch(addExpense({description:'Rent',amount:10000}));
+//  store.dispatch(addExpense({description:'water bill',amount:150,createdAt:0}));
+//  store.dispatch(addExpense({description:'gas bill',createdAt:2020}));
+//  store.dispatch(addExpense({description:'Rent',amount:10000}));
 //store.dispatch(setTextFilter('bill'));
 
 const state=store.getState();
 console.log(getVisibleExpenses(state.expenses,state.filters));
-console.log(state);
+//console.log(state);
 const jsx=
     (
     <div>
